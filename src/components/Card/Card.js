@@ -35,7 +35,7 @@ export const Card = ({users}) => {
                 <EllipseImg src={ellipse} alt="Logo" width="80px" height="80px" />
                 <FotoImg src={`${avatar}`} alt="Logo" width="62px" height="62px" />
                 <Text>{`${tweets}`} TWEETS</Text>
-                <Text>{`${followers}`} FOLLOWERS</Text>
+                <Text>{new Intl.NumberFormat("en-IN").format(`${followers}`)} FOLLOWERS</Text>
                 {!isFollowing ? (<Button type="submit" onClick={toggleActiveFollow} style={{ backgroundColor:'#EBD8FF' }}>FOLLOW</Button>) : (<Button type="submit" onClick={toggleActiveFollow}style={{ backgroundColor:'#5CD3A8' }}>FOLLOWING</Button>)}
             </ListItem>
 

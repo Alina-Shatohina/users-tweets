@@ -74,7 +74,6 @@ width:196px;
 height: 50px;
 cursor: pointer;
 border: none;
-/* background-color: #EBD8FF; */
 box-shadow: 0px 3.44px 3.44px rgba(0, 0, 0, 0.25);
 border-radius: 10.31px;
 font-weight: 600;
@@ -83,7 +82,5 @@ line-height: 1.22;
 text-align: center;
 vertical-align: top;
 color: #373737;
- /* &:active {
-    background-color: #5CD3A8;
-  } */
+
 `
