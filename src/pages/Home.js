@@ -1,10 +1,10 @@
-// import { Title } from './Home.styled';
-
+import imgHello from '../image/welcome.jpg';
 
 export default function Home() {
   return (
-    
-    <h1>Welcome to the tweets!</h1>
-   
+    <div>
+      <img src={imgHello} alt='Hello' style={{ width:'100%',marginTop:'20px'}}/>
+    </div>
+
   );
 }
