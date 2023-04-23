@@ -75,6 +75,7 @@ height: 50px;
 cursor: pointer;
 border: none;
 box-shadow: 0px 3.44px 3.44px rgba(0, 0, 0, 0.25);
+transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 border-radius: 10.31px;
 font-weight: 600;
 font-size: 18px;
@@ -82,5 +83,8 @@ line-height: 1.22;
 text-align: center;
 vertical-align: top;
 color: #373737;
+&:hover,
+&:focus {
+  scale: 1.1;
 
 `

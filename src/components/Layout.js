@@ -7,11 +7,13 @@ height: 100vh;
 justify-content: center;
 align-items: center;
 font-size: 40px;
-     
-    
+padding-top: 20px;
+
+
 `
 
 export const StyledLink = styled(NavLink)`
+  margin: 0 20px 0 20px;
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;

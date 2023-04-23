@@ -8,19 +8,22 @@ import {  Button, ListItem, Image,Text,LogoImage, EllipseImg, RectangleImg,FotoI
 
 
 export const Card = ({users}) => {
-    const { avatar, followers, tweets, following, id } = users;
+  const [isFollowing, setIsFollowing] = useState(users.following);
 
-    const [isFollowing, setIsFollowing] = useState(following);
-
-    const toggleActiveFollow = () => {
+  const { avatar, followers, tweets } = users;
+  
+    const toggleActiveFollow = async () => {
         if (!isFollowing) {
             users.followers += 1;
         } else {
             users.followers -= 1;
         }
+
+        const followers = users.followers;
+        const id = users.id;
         const updateFollowing = !isFollowing;
 
-      putUsers(id, updateFollowing, followers).then(
+      await putUsers(id, updateFollowing, followers).then(
         setIsFollowing(!isFollowing)
         );
 
