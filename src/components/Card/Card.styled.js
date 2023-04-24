@@ -2,18 +2,18 @@ import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../image/Logo.svg';
 
 
-// export const List = styled.ul`
-// list-style: none;
-// margin: 0;
-// padding: 0;
-// `
 export const ListItem = styled.li`
 position: relative;
 width: 380px;
 height: 460px;
 background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
 border-radius: 20px;
-box-shadow: -2.58px 6.87px 20.62px 0px rgba(0, 0, 0, 0.23);
+transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+:hover {
+  transform: scale(1.05);
+
+}
 `
 
 export const LogoImage = styled(Logo)`
@@ -83,8 +83,5 @@ line-height: 1.22;
 text-align: center;
 vertical-align: top;
 color: #373737;
-&:hover,
-&:focus {
-  scale: 1.1;
 
 `

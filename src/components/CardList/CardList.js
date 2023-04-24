@@ -4,17 +4,18 @@ import { useLocation } from 'react-router-dom';
 import { TfiArrowLeft } from 'react-icons/tfi';
 import { fetchUsers } from '../../service/fetch';
 import { Card } from '../Card/Card';
-import { List, Button, LinkButton, GoBackButton, Span } from './CardList.styled';
+import { BoxList, List, ButtonLoadMore, LinkButton, GoBackButton, Span } from './CardList.styled';
 
 export default function CardList() {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   // const [loading, setLoading] = useState(false);
-  // const [loadMoreBtnShown, setLoadMoreBtnShown] = useState(true);
+// const [loadMoreBtnShown, setLoadMoreBtnShown] = useState(true);
 
 
   const onLoadMoreBtn = () => {
-    setPage(page => page + 1);
+    // setPage(page => page + 1);
+     setPage(page + 1);
     // setLoading(true);
   };
 
@@ -28,12 +29,11 @@ export default function CardList() {
 
         if (data.length === 0) {
           // setLoading(false);
+
           return alert("No results")
 
         }
-        // if (users.length < 3) {
-        //   setLoadMoreBtnShown(false);
-        // }
+
         if (page === 1) {
           setUsers(data);
         } else {
@@ -49,7 +49,7 @@ export default function CardList() {
 
 
   return (
-    <div>
+    <BoxList>
       <LinkButton to={backLinkLocationRef.current}>
         <GoBackButton type="button">
           <TfiArrowLeft></TfiArrowLeft>
@@ -64,7 +64,7 @@ export default function CardList() {
 
       </List>
 
-      <Button type="button" onClick={onLoadMoreBtn}>Load More</Button>
-    </div>
+      <ButtonLoadMore type="button" onClick={onLoadMoreBtn}>Load More</ButtonLoadMore>
+    </BoxList>
   );
 }
