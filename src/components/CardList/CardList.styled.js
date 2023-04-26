@@ -21,11 +21,15 @@ export const List = styled.ul`
 
 export const LinkButton = styled(NavLink)`
   text-decoration: none;
+  display:inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 20px 0 0 20px;
+
 `;
 
 export const GoBackButton = styled.button`
 display: block;
-margin: 20px 0 0 20px;
 width: 150px;
 height: 50px;
 cursor: pointer;

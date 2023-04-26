@@ -3,7 +3,6 @@ import image from '../../image/picture.png';
 import rectangle from '../../image/Rectangle 1.png';
 import ellipse from '../../image/Ellipse 1.png';
 import { putUsers } from '../../service/fetch';
-
 import {  Button, ListItem, Image,Text,LogoImage, EllipseImg, RectangleImg,FotoImg } from './Card.styled'
 
 
@@ -11,7 +10,7 @@ export const Card = ({users}) => {
   const [isFollowing, setIsFollowing] = useState(users.following);
 
   const { avatar, followers, tweets } = users;
-  
+
     const toggleActiveFollow = async () => {
         if (!isFollowing) {
             users.followers += 1;
